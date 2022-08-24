@@ -8,6 +8,8 @@
     <form action="{{ route('post.destroy', [$post->id]) }}" method="POST">
         @csrf
         @method('DELETE')
-        <input type="submit" value="Delete Post">            
+        <div class="container">
+        <input type="submit" value="Delete Post" class="btn btn-md btn-secondary">            
+        </div>
     </form>
 </div>

@@ -3,37 +3,7 @@
 
 
 @section('content')
-    <style> 
-        {
-            background: #d9d8d8;
-            }h2{
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 30px;
-                text-align: center;
-                color: rgb(73, 73, 206);
-                margin: 20px 0 0 0;
-            }h3{
-                color: rgb(73, 73, 206);
-            } table{
-                border: 2px solid #0000ff4d;
-                background-color: #a3b1adaf;
-                margin: 0 15% 3% 15%;
-                width: 70%;
-                
-            }th{ 
-                font-size: 23px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                border-width: 100px;
-                border-bottom: solid 4px #aaaac1a3; 
-                height: 35px;
-                width: 37%;
-            }td{
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                padding: auto;
-                text-align: center;
-                font-size: 15px;
-        }
-    </style>
+    
     @php
         $Student =    array(
             array("name"=>"Akanegbu Favour", "location"=>"Delta", "age"=>"24"),
