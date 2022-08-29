@@ -23,7 +23,7 @@
     </div>
     <div class="container">
         @if (session('status'))
-            <div style="background:green; color:chartreuse; height: 30px; text-align:center;">
+            <div class="alert alert-success h-3">
                 {{ session('status')}}
             </div>
         @endif

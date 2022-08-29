@@ -9,8 +9,9 @@ h2{
     color: rgb(73, 73, 206);
     margin: 20px 0 0 0;
 }
-h3{
+div .h3 h3{
     color: rgb(73, 73, 206);
+    font-weight: 700;
 }
 table{
     border: 2px solid #0000ff4d;

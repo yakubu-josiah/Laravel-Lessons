@@ -6,7 +6,10 @@
 @section('content')
 
 
-<h3>This Are The Blog Posts Published</h3>
+<div class="h3">
+    <h3 class="mb-4">List of All Blog Posts Published</h3>
+</div>
+
 @forelse($posts as $key => $post)
    @include('post.partials.post')
 @empty

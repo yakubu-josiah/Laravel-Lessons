@@ -7,12 +7,6 @@
 
 @section('content')  
     <h1>{{ $posts['title'] }}</h1>
-@if ($posts['date'] > 2015)
-    <p><i>{{'This blog post is new. Enjoy!! Know that this was published in the year '. $posts['date']}}</i></p>
-@else
-    <p><i>{{'This blog post is old sorry, anyways enjoy! Published in '.$posts['date']. '!(>_<)'}}</i></p>
-@endif
-
     <h4>{{ $posts['content'] }}</h4>
     @php
         $a = false;
@@ -32,6 +26,11 @@
         @php
             if(random_int(0, 1) === 1) $a = true
         @endphp
-    @endwhile        
+    @endwhile 
+
+    <p class="pt_t text-success"><i>This BlogPost Was Added {{ $posts->created_at->diffForHumans() }}!!</i></p>
+    @if (now()->diffInMinutes($posts->created_at) < 5)
+    <div class="alert alert-info">New Post!!</div>        
+    @endif
     
 @endsection
