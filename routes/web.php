@@ -76,3 +76,13 @@ Route::prefix('/fun')->name('fun.')->group(function() use($posts){
 
 });
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
