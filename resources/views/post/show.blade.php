@@ -1,10 +1,6 @@
 @extends('Layout.layout')
 @section('title', $posts['title'])
 
-
-
-
-
 @section('content')  
     <h1>{{ $posts['title'] }}</h1>
     <h4>{{ $posts['content'] }}</h4>

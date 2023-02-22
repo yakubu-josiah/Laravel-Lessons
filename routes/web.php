@@ -18,11 +18,12 @@ use Symfony\Component\Routing\RouterInterface;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', [HomeController::class, 'home'])
-    ->name('home.index');
-Route::get('/contact', [HomeController::class, 'Contact'])
-    ->name('home.contacts');
+Route::group(['prefix' => 'welcome'], function(){
+    Route::controller(HomeController::class)->group(function(){
+        Route::get('/', 'home')->name('home.index');
+        Route::get('/contact', 'Contact')->name('home.contacts');
+    });
+});
 Route::get('/single', AboutController::class);
 
 Route::resource('post', PostController::class);
